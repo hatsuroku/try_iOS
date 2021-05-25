@@ -16,6 +16,7 @@
 		4A33AB51265CE28E00BBE0DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A33AB50265CE28E00BBE0DE /* main.m */; };
 		4A33AB5B265CE28E00BBE0DE /* QuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A33AB5A265CE28E00BBE0DE /* QuizTests.m */; };
 		4A33AB66265CE28F00BBE0DE /* QuizUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A33AB65265CE28F00BBE0DE /* QuizUITests.m */; };
+		4A33AB7A265CF73100BBE0DE /* TextDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A33AB79265CF73100BBE0DE /* TextDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		4A33AB61265CE28F00BBE0DE /* QuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A33AB65265CE28F00BBE0DE /* QuizUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuizUITests.m; sourceTree = "<group>"; };
 		4A33AB67265CE28F00BBE0DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A33AB79265CF73100BBE0DE /* TextDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextDelegate.m; sourceTree = "<group>"; };
+		4A33AB7E265CF74B00BBE0DE /* TextDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				4A33AB4C265CE28E00BBE0DE /* LaunchScreen.storyboard */,
 				4A33AB4F265CE28E00BBE0DE /* Info.plist */,
 				4A33AB50265CE28E00BBE0DE /* main.m */,
+				4A33AB79265CF73100BBE0DE /* TextDelegate.m */,
+				4A33AB7E265CF74B00BBE0DE /* TextDelegate.h */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A33AB46265CE28C00BBE0DE /* ViewController.m in Sources */,
+				4A33AB7A265CF73100BBE0DE /* TextDelegate.m in Sources */,
 				4A33AB40265CE28C00BBE0DE /* AppDelegate.m in Sources */,
 				4A33AB51265CE28E00BBE0DE /* main.m in Sources */,
 				4A33AB43265CE28C00BBE0DE /* SceneDelegate.m in Sources */,
@@ -375,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -428,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

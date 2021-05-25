@@ -14,6 +14,7 @@
 
 @implementation ViewController
 
+#pragma mark -- life circle
 - (id)init {
     if (self = [super init]) {
         _eatingShit = NO;
@@ -22,6 +23,23 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [_textDelegate registerNotification];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    [self setup];
+    [self addViews];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [_textDelegate unregisterNotification];
+}
+
+#pragma mark -- setup views
 - (void)setup {
     CGRect screen = [[UIScreen mainScreen] bounds];
     
@@ -67,8 +85,6 @@
     textView.delegate = _textDelegate;
     _textView = textView;
     
-    
-    
 }
 
 - (void)addViews {
@@ -79,17 +95,9 @@
     [self.view addSubview:_textField];
     [self.view addSubview:_textView];
     
-    
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    [self setup];
-    [self addViews];
-}
-
+#pragma mark -- click events
 - (void)onEatShitClick:(id)sender {
     if (_eatingShit) {
         _eatShitLabel.text = @"就是啊";

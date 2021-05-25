@@ -27,4 +27,23 @@
     return YES;
 }
 
+#pragma mark -- manage keyboard notifications
+- (void)registerNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+}
+
+- (void)unregisterNotification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
+}
+
+-(void) keyboardDidShow:(NSNotification *)notification {
+    NSLog(@"键盘打开");
+}
+
+-(void) keyboardDidHide:(NSNotification *)notification {
+    NSLog(@"键盘关闭");
+}
+
 @end

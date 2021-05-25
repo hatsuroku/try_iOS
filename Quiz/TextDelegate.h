@@ -12,6 +12,9 @@
 
 @interface TextDelegate : NSObject <UITextFieldDelegate, UITextViewDelegate>
 
+- (void)registerNotification;
+- (void)unregisterNotification;
+
 @end
 
 
